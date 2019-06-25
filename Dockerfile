@@ -45,6 +45,12 @@ RUN cd /tmp \
   && unzip -d /opt/TOS_DI-20181026_1147-V7.1.1/configuration/.m2 /tmp/talend-maven-repo.zip \
   && rm /tmp/talend-maven-repo.zip
 
+# Install libcanberra-gtk
+RUN \
+  apt-get update && \
+  apt-get install -y libcanberra-gtk-module && \
+  rm -rf /var/lib/apt/lists/*
+
 # Install xulrunner
 RUN cd /tmp \
   && curl -SL http://ftp.mozilla.org/pub/xulrunner/nightly/2012/03/2012-03-02-03-32-11-mozilla-1.9.2/xulrunner-1.9.2.28pre.en-US.linux-i686.tar.bz2 -O \
