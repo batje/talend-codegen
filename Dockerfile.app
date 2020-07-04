@@ -21,7 +21,7 @@ RUN \
 # Download and install Talend Open Studio in /opt
 RUN mkdir -p /opt \
   && cd /tmp \
-  && curl -SL https://s3-ap-southeast-2.amazonaws.com/imos-binary/static/talend/TOS_DI-20200219_1130-V7.3.1.zip -O \
+  && curl -SL https://razaoinfo.dl.sourceforge.net/project/talend-studio/Talend%20Open%20Studio/7.3.1/TOS_DI-20200219_1130-V7.3.1.zip -O \
   && unzip -d /opt /tmp/TOS_DI-20200219_1130-V7.3.1.zip \
   && rm /tmp/TOS_DI-20200219_1130-V7.3.1.zip
 
